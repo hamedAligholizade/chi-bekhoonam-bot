@@ -21,10 +21,10 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
-      - "5433:5433"
-    command: -p 5433
+      - "5435:5435"
+    command: -p 5435
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME} -p 5433"]
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME} -p 5435"]
 
 volumes:
   postgres_data: 
